@@ -1,0 +1,50 @@
+show dbs;
+
+db.user.insertOne({username: 'litchi'});
+db.user.insertMany([{},{}]);
+db.user.insert([{}]);
+
+db.user.find()
+
+// 为每个纪录添加password字段
+db.user.updateMany(
+    {},
+    {
+        $set: {password: '123123'}
+    }
+)
+
+//
+db.user.update(
+    {username: 'litchi'},
+    {
+        $set: {password: '1xiyu'}
+    }
+)
+
+db.user.updateOne(
+    {username: 'gx'},
+    {
+        $set: {password: 'dddd'}
+    }
+)
+
+db.user.deleteOne({password:'litchi'});
+
+db.user.remove({password: '123123'})
+
+db.user.remove({})
+
+db.user.deleteMany({})
+
+db.movie.find({year:'1994'},{title: 1,year:1});
+
+db.movie.find({year:'1994'},{title:1,year:1,_id:0}).size()
+
+db.movie.find({},{title:1,year:1,_id:0}).skip(10)   //  忽略前10条
+
+ db.movie.find({},{title:1,year:1,_id:0}).limit(3)    // 取前3条
+
+  db.movie.find({},{year:1,title:1,_id:0}).sort({year:-1})   //降序
+
+   db.movie.find({},{year:1,title:1,_id:0}).sort({year:-1})   // 升序 

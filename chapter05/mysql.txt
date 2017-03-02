@@ -1,0 +1,44 @@
+2017-02-28T13:39:08.829037Z 1 [Note] A temporary password is generated for root@localhost: 0nA8)i0Nei&0
+
+mysql -u root -p ;
+show databases;
+create database user;
+use user;
+show tables;
+create table admin(
+     id int not null auto_increment,
+     username varchar(50) not null,
+     password varchar(100) not null,
+     primary key(id)
+     );
+desc admin;
+
+insert into admin(username,password) value('litchi','123455');
+if not admin(username,password) , value(id,'litchi','12324');
+delete from admin where id=3;
+
+delete from admin;    在插入也就是从id＝4 插入；
+truncate admin;   清空表，在插入从id＝1 开始插入； 
+select * from admin;
+
+
+ create table if not exists article(
+ id int not null auto_increment,
+ title varchar(50) not null,
+ content varchar(100) not null,
+ author varchar(20) not null,
+ createdate varchar(50) not null,
+ primary key(id)
+ );
+
+ select * from article order by author;
+
+  select author, count(*) from article group by author;    
+
+  select * from article where author like '%x%';  模糊查询
+
+ drop table admin
+  连接
+  inner   相交（两个集合之间的交集）   select * from admin inner join article on admin.username = article.author;
+  left   select * from admin left join article on admin.username = article.author;
+  right
