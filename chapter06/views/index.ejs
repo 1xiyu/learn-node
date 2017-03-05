@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <!--
+    <p>Welcome to <%= name %></p>
+    <P>
+      <%= username %>
+    </p>
+    -->
+    <% if (!username){ %>
+    <div class="">
+      <input type="button" value="login" onclick="location.href='/login'"/>
+      <input type="button" value="register" onclick="location.href='/register'"/>
+    </div>
+    <% }else{ %>
+    <div class="">
+     hello: <%= username %>
+     <input type="button" value="评论" onclick="location.href='/comment'">
+     <input type="button" value="注销" onclick="location.href='/logout'">
+    <% } %>
+  </body>
+</html>
