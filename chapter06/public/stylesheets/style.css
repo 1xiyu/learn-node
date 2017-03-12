@@ -15,3 +15,23 @@ a {
   text-align: center;
   margin-bottom: 20px;
 }
+
+table{
+   margin-top: 10px;
+   width: 100%;
+   border-top: 1xp solid #ddd;
+   border-right: 1px solid #ddd;
+}
+
+table th {
+  background: #eee;
+}
+
+table td, table th {
+  height: 30px;
+  border: 1px solid #ddd;
+  border-right: 0;
+  border-top: 0;
+  border-collapse: collapse;
+  padding: 0 10px;
+}
