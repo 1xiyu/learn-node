@@ -1,5 +1,8 @@
 var express = require('express');
-var router = express.Router();
+// create can access to
+// express.Router类，创建模块化安装路径的处理程序,for manage router。
+// router()  return a Router instance
+var router = express.Router();  
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
