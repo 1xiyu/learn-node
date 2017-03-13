@@ -21,7 +21,7 @@ router.post('/register',function(req,res){
   var nickname = req.body['nickname'];
   var insertData = function(db,callback){
     var data = [{username: username,password: password,nickname: nickname}];
-    // connect table
+    // the document quote
     var conn = db.collection('user');
 
     conn.insert(data,function(err,results){
